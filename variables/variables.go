@@ -23,6 +23,15 @@ var string4 = "Hello from Go!!"
 const number3 = 100
 const float3 = 999.999
 
+/* const block declaration */
+
+const (
+	_  = iota
+	kb = 1 << (iota * 10)
+	mb = 1 << (iota * 10)
+	gb = 1 << (iota * 10)
+)
+
 func main() {
 
 	/* assigning values to variables */
@@ -42,4 +51,8 @@ func main() {
 	fmt.Println(string2)
 	fmt.Println(bool2)
 	fmt.Println(float2)
+
+	fmt.Println("kb: ", kb)
+	fmt.Println("mb: ", mb)
+	fmt.Println("gb: ", gb)
 }
