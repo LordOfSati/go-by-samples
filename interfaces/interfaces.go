@@ -67,6 +67,14 @@ type writer interface {
 	write()
 }
 
+/* Example 4 - empty interfaces */
+
+type any interface{}
+
+func printValues(input any) {
+	fmt.Println(input)
+}
+
 /* reader and writer interfaces are embedded in readWriter interface */
 type readWriter interface {
 	reader
@@ -83,4 +91,8 @@ func main() {
 	students := people{person{"Joe", 31}, person{"Ajay", 21}, person{"Jade", 20}}
 	sort.Sort(students)
 	fmt.Println(students)
+	/* Example 4 */
+	printValues(sq)
+	printValues(ci)
+	printValues(students)
 }
