@@ -132,3 +132,8 @@ func sum(inputChannel chan int) chan int {
 	}()
 	return channel
 }
+
+/*
+ * There are several patterns in go concurrency
+ * like pipeline, fan-in/fan-out, etc
+ */
